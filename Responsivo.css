@@ -1,0 +1,154 @@
+nav {
+    background-color: #cdffbb;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(38, 38, 38);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #eae9e9;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #03a3e8;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Estilos gerais da pagina */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Container da galeria usando Grind */
+
+.grid-gallery-container {
+    display: grid;
+    /* Ativa o CSS Grind */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grind com colunas flexiveis */
+    gap: 100px;
+    /* Espaçamento entre os itens */
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Cada item da galeria */
+
+.grid-gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* Estilos para imagens */
+
+.grid-gallery-item img {
+    width: 100%;
+    /* Garante que a imagem preencha todo espaço disponivel */
+    height: auto;
+    /* Mantem a proporçao da imagem */
+}
+
+.grid-gallery-item {
+    width: 300px;
+    height: 550px;
+}
+
+.grid-gallery-container:hover .grid-gallery-item:hover {
+    opacity: .9;
+}
+
+.grid-gallery-container .grid-gallery-item {
+    opacity: .9;
+}
+
+
+/* Cada item da galeria */
+
+.grid-gallery-item {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 350px;
+    /* Define uma largura fixa para cada item */
+    transition: all .3s;
+}
+
+.grid-gallery-item:hover {
+    transform: translateY(-20px)
+}
+
+.grid-gallery-container:hover .grid-gallery-item {
+    opacity: .5;
+}
+
+.grid-gallery-container .grid-gallery-item:hover {
+    opacity: 1
+}
+
+.grid-gallery-item:hover {
+    transform: translateY(-20px)
+}
+
+.grid-gallery-container {
+    display: grid;
+    gap: 50px;
+    padding: 40px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
